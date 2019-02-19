@@ -1,0 +1,6 @@
+en:
+  site_settings:
+    hiveon_homepage_enabled: 'Enable hiveon homepage?'
+    hiveon_homepage_img_url: 'Hiveon homepage main picture url'
+    hiveon_homepage_header_title: 'Header title'
+    hiveon_homepage_header_text: 'Header subtitle'

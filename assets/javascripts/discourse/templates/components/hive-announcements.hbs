@@ -1,0 +1,27 @@
+{{#each topics.topics as |topic|}}
+    <div class="hiveon-topic">
+        <div class="hiveon-topic-row">
+            <div class="hiveon-topic-col avatar">
+            </div>
+            <div class="hiveon-topic-col title">
+                <h4>
+                    <a href='/t/{{topic.slug}}/{{topic.id}}'>{{topic.title}}</a>
+                </h4>
+            </div>
+        </div>
+        <div class="hiveon-topic-row flex">
+            <div class="wrapper">
+                <div class="info">
+                    <a class="badge-wrapper box" href="{{concat "/c/" topic.category.slug}}">
+                        <span style="background-color:{{concat "#" topic.category.color}}" class="badge-category-bg" ></span>
+                        <span style="color: #fff" data-drop-close="true" class="badge-category clear-badge" title="{{topic.category.description}}">
+                            <span class="category-name">{{topic.category.name}}</span>
+                        </span>
+                    </a>
+
+                    <span class="comments"><i class='fa fa-comments'></i>{{topic.posts_count}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}

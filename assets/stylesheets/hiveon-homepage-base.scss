@@ -1,0 +1,25 @@
+$hiveon-primary-color: #ffed0a;
+$hiveon-primary-helper-color: #F8C959;
+$hiveon-secondary-color: #35DAAF;
+$hiveon-dark-color: #614a3c;
+$hiveon-light-color: #C559DB;
+$hiveon-gray-color: #363636;
+$hiveon-white-color: white;
+
+
+$hiveon-dark-light: #33373e;
+$hiveon-dark-lighten: #383e4a;
+
+
+
+$break-mobile: 400px;
+$break-small: 900px;
+$break-large: 1200px;
+
+@import "./hiveon-global";
+@import "./hiveon-btn";
+@import "./hiveon-header";
+@import "./hiveon-topic";
+@import "./hiveon-common";
+
+@import "./help-people";

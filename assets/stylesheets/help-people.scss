@@ -1,0 +1,90 @@
+.need-help-topics {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 40px;
+
+    @media screen and (max-width: $break-small) {
+        padding: 0px 10px;
+    }
+    
+    @media screen and (max-width: $break-mobile) {
+        padding: 0px 10px;
+    }
+    // opacity: 0;
+
+    &.ready {
+        opacity: 1;
+        transition: opacity 0.3s ease-in;
+      }
+
+
+    .help-topic {
+        flex: 0 0 220px;
+        padding: 6px 12px;
+        font-size: 16px;
+        border-radius: 6px;
+        background-color: #282c34;
+        box-shadow: 0 4px 16px rgba(0,0,0, 0.35);
+        margin: 10px 10px;
+
+        @media screen and (max-width: $break-small) {
+            flex: 1 1 auto;
+        }
+        
+        transition: box-shadow .25s linear;
+        &:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0, 0.8);
+        }
+    }
+
+    .author {
+        margin-bottom: 4px;
+        .username {
+            font-size: 14px;
+            color: #ddd;
+            font-weight: 600;
+        }
+    }
+
+    .badge-wrapper {
+        font-size: 12px;
+
+        margin-top: 6px;
+    }
+
+    .topic-badge {
+        font-size: 12px;
+    }
+
+    .topic-link {
+        color: #f1f1f1;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        display: block;
+        margin: 10px 0;    
+    }
+    .top {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 6px 0 0;
+        .category {
+            flex: 1;
+            .circle {
+                width: 10px;
+                height: 10px;
+                display: block;
+                border-radius: 5px;
+                float: left;
+                margin-right: 4px;
+                margin-top: 8px;
+            }
+        }
+        .user {
+
+        }        
+    }
+
+}

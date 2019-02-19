@@ -1,0 +1,55 @@
+{{#if siteSettings.hiveon_homepage_enabled}}
+  {{#if (eq currentPath "discovery.categories")}}
+    <div class="hive">
+        <div class="hiveon-header">
+          <div class="wrap">
+            <div class="hiveon-header__title">
+              <h2>{{ siteSettings.hiveon_homepage_header_title }}</h2>
+              <p>{{ siteSettings.hiveon_homepage_header_text }}</p>
+              {{#if currentUser}}
+              {{else}}
+                <a href="/signup" class="sign-up-button hiveon-btn signup">Create account</a>
+              {{/if}}
+            </div>
+            <div class="hiveon-header__img">
+              <img src="{{ siteSettings.hiveon_homepage_img_url }}" alt="Hiveon community intro">
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div id="hiveon-outlet" class="hive">
+      {{#unless site.mobileView}}
+
+      <div class="hiveon-main-row">
+        <div class="wrap">
+          <div class="hiveon-row">
+            <div class="hiveon-col">
+              <h3 class="hiveon-h2">Top discussions</h3>
+              <div class="hiveon-topic-list" id="hiveon-topic-list--hot">
+                {{hot-discussions}}
+              </div>
+              <a href="/top" class="hiveon-btn right">More discussions</a>
+            </div>
+
+            <div class="hiveon-col">
+              <h3 class="hiveon-h2">Announcements</h3>
+              <div class="hiveon-topic-list">
+                {{hive-announcements}}
+              </div>
+              <a href="/u/hiveos/activity/topics" class="hiveon-btn right">More topics</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/unless}}
+      
+      
+      <div class="hiveon-gradient">
+        <h2 class="hiveon-h3"> Can you help this people?</h2>        
+        {{need-help-topics}}
+      </div>
+    </div>
+
+  {{/if}}
+{{/if}}

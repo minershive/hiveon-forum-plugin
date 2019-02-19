@@ -1,0 +1,27 @@
+a.hiveon-btn, .hiveon-btn {
+  margin: 20px 0;
+
+  display: inline-block;
+  border-radius: 6px;
+  padding: 15px;
+  text-transform: uppercase;
+  background-color: $hiveon-dark-light;
+  font-size: 12px;
+  font-weight: 600;
+  color: $hiveon-white-color;
+  opacity: 0.85;
+
+  box-shadow: 0 2px 8px rgba(0,0,0, 0.35);
+  &:hover {
+    opacity: 1;
+    box-shadow: 0 2px 12px rgba(0,0,0, 0.6);
+    transition: box-shadow .25s linear;
+  }
+  
+  &.right {
+    float: right;
+  }
+  &.signup {
+    font-size: 16px;
+  }
+}

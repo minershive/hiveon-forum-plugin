@@ -1,0 +1,99 @@
+#hiveon-outlet {
+  opacity: 1;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.hiveon-row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.hiveon-col {
+  padding-right: 30px;
+  &:last-child { padding-right: none; }
+
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+.hiveon-h2 {
+  display: block;
+  padding: 30px 10px 10px 0px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 800;
+  color: rgba($hiveon-white-color, .7);
+}
+
+.hiveon-h3 {
+  display: block;
+  text-align: center;
+  padding: 50px 10px 30px 0px;
+  font-size: 36px;
+  line-height: 30px;
+  font-weight: 800;
+  color: rgba($hiveon-white-color, .7);
+  @media screen and (max-width: $break-small) {
+    font-size: 26px;
+    text-align: center;
+  }
+  @media screen and (max-width: $break-mobile) {
+    font-size: 21px;
+  }
+}
+
+.hiveon-gradient {
+  position: relative;
+
+  $gradientBgColor: rgb(245, 119, 0);
+  background: linear-gradient(
+    0deg,
+    rgba($gradientBgColor,  0) 0%,
+    rgba($gradientBgColor, .05) 20%,
+    rgba($gradientBgColor,  .18) 50%,
+    rgba($gradientBgColor, .05) 80%,
+    rgba($gradientBgColor,  0) 100%
+  );
+
+  padding: 100px 0 50px 0;
+  margin-top: 20px;
+
+  .hiveon-h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  @media screen and (max-width: $break-mobile) {
+    padding: 10px 0;
+  }
+  
+  @media screen and (max-width: $break-small) {
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.hiveon-main-row {
+  margin-top: 80px;
+  @media screen and (max-width: $break-small) {
+    margin-top: 30px;
+  }
+  .wrap {
+    .hiveon-row {
+      display: flex;
+      .hiveon-col {
+        flex: 1;
+      }
+    }
+  }
+}

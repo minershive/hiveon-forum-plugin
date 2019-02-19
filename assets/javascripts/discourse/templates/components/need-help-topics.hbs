@@ -1,0 +1,16 @@
+{{#each items.items as |item|}}
+    <div class="help-topic">
+        <div class="topic-wrapper">
+            <div class="top">
+                <a class="badge-wrapper box" href="{{concat "/c/" item.category.slug}}">
+                    <span style="background-color:{{concat "#" item.category.color}}" class="badge-category-bg" ></span>
+                    <span style="color: #fff" data-drop-close="true" class="badge-category" title="{{item.category.description}}">
+                     <span class="category-name">{{item.category.name}}</span>
+                 </span>
+                </a>
+                <a class="user" href="/u/{{item.user.username}}"><img width="24px" alt="{{item.user.username}}" src="{{item.user.avatar_template}}" class="avatar"></a>
+            </div>        
+            <a class="topic-link" href="{{item.url}}">{{item.title}}</a>
+        </div>
+    </div>
+{{/each}}
