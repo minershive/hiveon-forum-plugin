@@ -3,7 +3,7 @@ plugins:
     default: true
     client: true
   hiveon_homepage_img_url:
-    default: 'https://git.tor.ph/com/hiveon-forum-theme/raw/master/assets/intro.svg'
+    default: 'https://raw.githubusercontent.com/minershive/hiveon-forum-theme/master/assets/intro.svg'
     client: true
   hiveon_homepage_header_title:
     default: 'Online community with'
