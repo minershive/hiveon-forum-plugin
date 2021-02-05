@@ -1,12 +1,14 @@
 import { ajax } from 'discourse/lib/ajax';
+import getURL from "discourse-common/lib/get-url";
+import Service, { inject as service } from '@ember/service';
 
 import {
     on
-} from "ember-addons/ember-computed-decorators";
+} from "discourse-common/utils/decorators";
 
-export default Ember.Service.extend({
+export default Service.extend({
     topics: null,
-    categories: Ember.inject.service(),
+    categories: service(),
 
     @on('init')
     onInit() {
@@ -28,7 +30,7 @@ export default Ember.Service.extend({
                     if (slug.trim().length === 0) {
                         slug = "topic";
                     }
-                    obj.url = Discourse.getURL("/t/") + slug + "/" + obj.id;
+                    obj.url = getURL("/t/") + slug + "/" + obj.id;
                     obj.user = result.users.find(u => {
                         return u.id == obj.posters[0].user_id;
                     });
