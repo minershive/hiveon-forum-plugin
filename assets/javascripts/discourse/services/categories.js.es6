@@ -3,14 +3,16 @@ import {
   default as computed,
   on,
   observes
-} from "ember-addons/ember-computed-decorators";
+} from "discourse-common/utils/decorators";
 import KeyValueStore from "discourse/lib/key-value-store";
+import Service, { inject as service } from '@ember/service';
+import { Promise } from "rsvp";
 
 const keyValueStore = new KeyValueStore("hiveon");
 
-export default Ember.Service.extend({
+export default Service.extend({
     categories: null,
-    store: Ember.inject.service(),
+    store: service(),
     
     @on('init')
     getCategories() {        
@@ -24,7 +26,7 @@ export default Ember.Service.extend({
         }
 
         this.set('categories', categories);
-        return new Ember.RSVP.Promise(resolve => {
+        return new Promise(resolve => {
 
             return resolve();
         });
