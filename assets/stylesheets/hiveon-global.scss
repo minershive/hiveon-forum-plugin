@@ -63,18 +63,17 @@ p:has(code) {
 
 
 .d-header {
-  background-color: transparent;
+  background-color: #292c31;
   box-shadow: none;
-  .contents { margin: 10px 0 }
+  .contents { margin: 0 }
   .wrap { max-width: 1300px }
-  padding-bottom: 10px;
+  padding-bottom: 0;
 
-  height: 52px;
+  height: 40px;
   .title {
     padding: 5px 0;
   }
-
-}
+} 
 
 .docked .d-header {
   background-color: rgba(33, 37, 43, 0.9);

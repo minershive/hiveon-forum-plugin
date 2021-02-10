@@ -1,14 +1,17 @@
-import { observes } from "ember-addons/ember-computed-decorators";
+import { observes } from "discourse-common/utils/decorators";
+import { inject as service } from '@ember/service';
+import { run } from '@ember/runloop';
+import Component from '@ember/component';
 
-export default Ember.Component.extend({
+export default Component.extend({
     classNames:['hiveon-topic-list', 'hot-discussions'],
-    topics: Ember.inject.service('top'),
+    topics: service('top'),
 
     init() {
         this._super();
         
         var self = this;
-        Ember.run.schedule("afterRender", () => {
+        run.schedule("afterRender", () => {
             self.$().addClass('ready');
         });
     }
