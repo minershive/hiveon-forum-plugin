@@ -4,7 +4,7 @@
         <div class="hiveon-header">
           <div class="wrap">
             <div class="hiveon-header__title">
-              <h2>{{ siteSettings.hiveon_homepage_header_title }}</h2>
+              <h1>{{ siteSettings.hiveon_homepage_header_title }}</h1>
               <p>{{ siteSettings.hiveon_homepage_header_text }}</p>
               {{#if currentUser}}
               {{else}}
@@ -25,7 +25,7 @@
         <div class="wrap">
           <div class="hiveon-row">
             <div class="hiveon-col">
-              <h3 class="hiveon-h2">Top discussions</h3>
+              <h2 class="hiveon-h2">Top discussions</h2>
               <div class="hiveon-topic-list" id="hiveon-topic-list--hot">
                 {{hot-discussions}}
               </div>
@@ -33,7 +33,7 @@
             </div>
 
             <div class="hiveon-col">
-              <h3 class="hiveon-h2">Announcements</h3>
+              <h2 class="hiveon-h2">Announcements</h2>
               <div class="hiveon-topic-list">
                 {{hive-announcements}}
               </div>
